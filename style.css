@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #fff;
+	color: white;
+	font-family: 'DM Mono', monospace;
+}
+
+article > * {
+	margin: 15px 0;
+}
+
+article > :last-child {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.card-link {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-decoration: none;
+	width: 20em;
+	padding: 0.8em;
+	margin: 0 15px;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	background: transparent;
+	color: white;
+	transition: 0.2s;
+}
+
+.card-link:hover {
+	background: white;
+	color: #000;
+	transform: scale(1.1);
+}
+.card-list {
+	display: flex;
+	padding: 3rem;
+}
+
+.card {
+	display: flex;
+	text-align: center;
+	position: relative;
+	flex-direction: column;
+	width: 380px;
+	min-width: 250px;
+	padding: 1.5rem;
+
+	border-radius: 16px;
+	background: #17141d;
+	box-shadow: -1rem 0 3rem #000;
+
+	transition: 0.2s;
+}
+
+.img-container {
+	width: 100%;
+	min-height: 300px;
+	cursor: pointer;
+	min-height: 15em;
+	border-radius: 15px;
+}
+
+.project-description {
+	text-align: center;
+}
+
+.card:hover {
+	transform: translateY(-1rem);
+}
+
+.card:hover ~ .card {
+	transform: translateX(130px);
+}
+
+.card:not(:first-child) {
+	margin-left: -130px;
+}
